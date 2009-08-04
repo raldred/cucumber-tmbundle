@@ -15,6 +15,7 @@ module Cucumber
         @project_directory = project_directory
         @filename_opts = ""
         @cucumber_bin = cucumber_bin || CUCUMBER_BIN
+        @cucumber_bin = "#{cucumber_bin} -p sw"
         @cucumber_opts = cucumber_opts || "--format=html"
         @cucumber_opts << " --profile=#{@file.profile}" if @file.profile
       end
